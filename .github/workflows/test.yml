@@ -11,9 +11,13 @@ jobs:
             with:
                 node-versions: 18
           - name: Install dependencies
-            run: npm ci
+            run: |
+                cd dummy-project
+                npm ci
           - name: Run tests
-            run: npm test
+            run: |
+                cd dummy-project
+                npm test
           
           
 
